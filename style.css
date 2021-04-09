@@ -1,0 +1,52 @@
+
+body {
+  font-family: 'Special Elite', cursive;
+  text-align: center;
+}
+
+header {
+  background-color: black;
+  padding: 2em;
+}
+
+h1 {
+  font-size: 3em;
+  color: whitesmoke;
+  text-shadow: 1px 1px #A93226;
+}
+
+section {
+  padding: 1em;
+  margin: 0;
+  background-color: lightgray;
+}
+
+h3 {
+  font-size: 2em;
+}
+
+p {
+  font-size: 1.5em;
+}
+
+#answerText{
+  border: 1em;
+  border-radius: 10%;
+  margin-bottom: 0.5em;
+  padding: 0.5em;
+}
+
+#submit{
+  border-radius: 10%;
+  margin-top: 0.5em;
+  padding: 0.25em;
+}
+
+footer {
+  font-size: 1.25em;
+  background-color: #808B96;
+  color: whitesmoke;
+  text-shadow: 0.5px 0.5px black;
+  padding: 1em;
+}
+
