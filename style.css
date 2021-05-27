@@ -29,6 +29,25 @@ p {
   font-size: 1.5em;
 }
 
+input {
+    display: block;
+    margin: auto;
+    font-size: 1em;
+    padding: 0.15em;
+    text-align: center;
+    margin-top: 1em;
+}
+
+button {
+    background-color: #242321;
+    color: antiquewhite;
+    font-size: 1em;
+    padding: 0.15em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    margin-top: 1em;
+}
+
 #answerText{
   border: 1em;
   border-radius: 10%;
