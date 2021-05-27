@@ -1,6 +1,8 @@
+//Object containing quiz questions and answers
 const quiz = [
+  
   {
-    question: "What year was the exorcist released?",
+    question: "What year was the Excorist released?", 
     answer: "1974"
   },
   {
@@ -8,42 +10,52 @@ const quiz = [
     answer: "bruce campbell"
   },
   {
-    question: "What name did Stephen King use, when writing The Running Man?",
+    question:"What name did Stephen King use, when writing The Running Man?",
     answer: "richard bachman"
   },
-  {
+  { 
     question: "What collection of slasher films features Jason Voorhees as the main villain?",
     answer: "friday the 13th"
+  },
+  {
+    question: "The End!"
   }
+
 ];
 
-let correctAnswers = 0;
-let wrongAnswers = 0;
-let correct = [];
-let wrong = [];
+//Varibles to select html elements and apply content
+const question = document.getElementById("question");
+const button = document.getElementById("button");
+const userInput = document.getElementById("userInput");
+const input = document.getElementById("input");
 
+let questionNumber = 1;
+question.textContent = quiz[questionNumber - 1].question;
 
-for ( let i = 0; i < quiz.length; i ++ ) {
-  let question = quiz[i].question;
-  let answer = quiz[i].answer;
-  let userAnswer = prompt(question);
+//Varibles to keep track of users score
+const correctAnswers = [];
+const wrongAnswers = [];
+const score = document.getElementById("score");
+let userScore = 0;
 
-  if ( answer === userAnswer.toLocaleLowerCase()) {
-    correctAnswers ++;
-    correct.push(question);
+//Click handler event to work though questions
+button.addEventListener("click", () => {
+  
+  questionNumber++;
+  question.textContent = quiz[questionNumber - 1].question;
+  
+
+  if ( input.value === quiz[questionNumber - 2].answer ) {
+    userScore++;
+    score.textContent = "Score: " + userScore;
   } else {
-    wrongAnswers ++;
-    wrong.push(question + "<br>");
+    score.textContent = "Score: " + userScore;
   }
 
-  let results = `
-  <h3>You got ${correctAnswers} questions correct!</h3>
-  <p>${correct.join(`<br>`)}</p>
-  <h3>You got ${wrongAnswers} questions wrong!</h3>
-  <p>${wrong.join(`<br>`)}</p>
-  `;
+  input.value = "";
 
-  document.getElementById("results").innerHTML = results;
+});
 
-}
+
+
 
